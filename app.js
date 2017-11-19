@@ -6,7 +6,7 @@ const enmapLevel = require('enmap-level');
 const app = express();
 
 app.locals.urlDB = new enmap({provider: new enmapLevel({name: 'shorturl'})});
-app.locals.domain = '127.0.0.1:8080/';
+app.locals.domain = '';
 
 app.locals.urlDB.defer.then(() => {
   console.log(`[URLDB] Loaded ${app.locals.urlDB.size} URLs!`);
